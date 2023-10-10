@@ -1,0 +1,1523 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #123;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#ovo{
+  color: #0062ff;
+  text-decoration: none;
+}
+
+b{
+  color: #0062ff;
+}
+
+
+/* botão do Brainly */
+.button1 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 400px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button1::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button1::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button1::after,.button1::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button1-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button1:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button1:hover .text {
+  top: -100%;
+}
+
+.button1:hover .icon {
+  top: 0;
+}
+
+.button1:hover:before,.button1:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button1:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button1:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do chat gpt */
+.button2 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 850px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button2::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button2::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button2::after,.button2::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button2:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button2:hover .text {
+  top: -100%;
+}
+
+.button2:hover .icon {
+  top: 0;
+}
+
+.button2:hover:before,.button2:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button2:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button2:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do Passei Direto */
+.button3 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 1300px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button3::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button3::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button3::after,.button3::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button3-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button3:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button3:hover .text {
+  top: -100%;
+}
+
+.button3:hover .icon {
+  top: 0;
+}
+
+.button3:hover:before,.button3:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button3:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button3:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
+/* botão do Photomath */
+
+.button4 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 1730px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button4::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button4::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button4::after,.button4::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button4-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button4:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button4:hover .text {
+  top: -100%;
+}
+
+.button4:hover .icon {
+  top: 0;
+}
+
+.button4:hover:before,.button4:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button4:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button4:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do Symbolab */
+.button5 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 2080px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button5::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button5::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button5::after,.button5::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button5-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button5:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button5:hover .text {
+  top: -100%;
+}
+
+.button5:hover .icon {
+  top: 0;
+}
+
+.button5:hover:before,.button5:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button5:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button5:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* Botão De Voltar */
+sair{
+position: absolute;
+top: 20px;
+left: 20px;
+padding: 1.3em 3em;
+font-size: 9px;
+text-transform: uppercase;
+letter-spacing: 2.5px;
+font-weight: 500;
+color: #000;
+background-color: #fff;
+border: none;
+border-radius: 45px;
+box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease 0s;
+cursor: pointer;
+outline: none;
+}
+
+sair:hover{
+background-color: #0062ff;
+box-shadow: 0px 15px 20px rgba(34, 31, 232, 0.473);
+color: #fff;
+transform: translateY(-7px);
+}
+
+sair:active{
+transform: translateY(-1px);
+}
+
+
+/* Escrita do Brainly */
+.Brainlyh1{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Brainlyh2{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Brainlyh4{
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  color: #fff;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Escrita do Chat GPT */
+.gpth1{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 550px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gpth2{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gpth4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 700px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do Passei Direto */
+.passeidiretoh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1000px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.passeidiretoh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1050px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.passeidiretoh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1150px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do  Photomath */
+.photomathh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1450px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photomathh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1500px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photomathh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do  Symbolab */
+.Symbolabh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1800px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Symbolabh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1850px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Symbolabh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1950px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Barra De Rolamento */
+::-webkit-scrollbar{
+  width: 7px;
+  background-color: #0e0e0e;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #0062ff;
+}
+
+
+/* Mudança De Tamanho Para Celular */
+@media screen and (max-width:1020px){
+
+
+/* Escrita do Brainly */
+.Brainlyh1{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Brainlyh2{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 140px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Brainlyh4{
+  text-align: justify;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  color: #fff;
+  top: 480px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* Escrita do Chat GPT */
+.gpth1{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 1000px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gpth2{
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  top: 1100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gpth4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do Passei Direto */
+.passeidiretoh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1700px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.passeidiretoh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 1800px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.passeidiretoh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 2050px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do  Photomath */
+.photomathh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 2580px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photomathh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 2650px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photomathh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 2870px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do  Symbolab */
+.Symbolabh1{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 3200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Symbolabh2{
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 3270px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Symbolabh4{
+  text-align: justify;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  top: 3470px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* botão do Brainly */
+.button1 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 850px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button1::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button1::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button1::after,.button1::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button1-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button1:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button1:hover .text {
+  top: -100%;
+}
+
+.button1:hover .icon {
+  top: 0;
+}
+
+.button1:hover:before,.button1:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button1:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button1:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+
+
+/* botão do chat gpt */
+
+
+
+.button2 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 1500px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button2::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button2::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button2::after,.button2::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button2-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button2:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button2:hover .text {
+  top: -100%;
+}
+
+.button2:hover .icon {
+  top: 0;
+}
+
+.button2:hover:before,.button2:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button2:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button2:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do Passei Direto */
+.button3 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 2330px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button3::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button3::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button3::after,.button3::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button3-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button3:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button3:hover .text {
+  top: -100%;
+}
+
+.button3:hover .icon {
+  top: 0;
+}
+
+.button3:hover:before,.button3:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button3:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button3:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do Photomath */
+.button4 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 3100px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button4::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button4::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button4::after,.button4::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button4-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button4:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button4:hover .text {
+  top: -100%;
+}
+
+.button4:hover .icon {
+  top: 0;
+}
+
+.button4:hover:before,.button4:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button4:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button4:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+
+
+/* botão do Symbolab */
+.button5 {
+  --width: 100px;
+  --height: 35px;
+  --tooltip-height: 35px;
+  --tooltip-width: 90px;
+  --gap-between-tooltip-to-button: 18px;
+  --button-color: #0062ff;
+  --tooltip-color: #fff;
+  top: 3700px;
+  left: 50%;
+  margin: 0;
+  width: var(--width);
+  height: var(--height);
+  background: var(--button-color);
+  position: absolute;
+  text-align: center;
+  border-radius: 0.45em;
+  font-family: "Arial";
+  transition: background 0.3s;
+  transform: translate(-50%, -50%);
+}
+
+.button5::before {
+  position: absolute;
+  content: attr(data-tooltip);
+  width: var(--tooltip-width);
+  height: var(--tooltip-height);
+  background-color: var(--tooltip-color);
+  font-size: 0.9rem;
+  color: #111;
+  border-radius: .25em;
+  line-height: var(--tooltip-height);
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+  left: calc(50% - var(--tooltip-width) / 2);
+}
+
+.button5::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: var(--tooltip-color);
+  left: calc(50% - 10px);
+  bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+}
+
+.button5::after,.button5::before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button5-wrapper,.text,.icon {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  color: #fff;
+}
+
+.text {
+  top: 0
+}
+
+.text,.icon {
+  transition: top 0.5s;
+}
+
+.icon {
+  color: #fff;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.button5:hover {
+  background: rgba(34, 31, 232, 0.473);
+}
+
+.button5:hover .text {
+  top: -100%;
+}
+
+.button5:hover .icon {
+  top: 0;
+}
+
+.button5:hover:before,.button5:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.button5:hover:after {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+}
+
+.button5:hover:before {
+  bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+}
+}
