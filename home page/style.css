@@ -77,7 +77,6 @@ section{
 }
 
 
-
 /* <!-- Texto Em Que Ta Dentro Do Quadro Transparente --> */
 #h11{
   position: absolute;
@@ -86,13 +85,11 @@ section{
   transition: d;
 }
 
-
 #h11:hover{
   cursor: pointer;
   font-size: 30px;
   transition: 0.6s;
 }
-
 
 p{
   position: absolute;
@@ -104,29 +101,7 @@ p{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* <!-- Botão Da Calculadora --> */
 .Btn {
   transform: translate(-50%, -50%);
   top: 10%;
@@ -183,22 +158,10 @@ p{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Mudança De Tamanho Para Celular */
 @media screen and (max-width: 1020px){
+
+  /* Quadrado Transparente */
   .form-box{
     width: 300px;
     height: 300px;
@@ -218,5 +181,12 @@ p{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+  }
+
+
+  /* <!-- Botão Da Calculadora --> */
+  .Btn {
+    left: 80%;
+    scale: 0.9;
   }
 }
