@@ -13,10 +13,11 @@
 }
 .calculadora{
     position: absolute;
-    background-color: #000000cc;
+    background-color: #00000065;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    border: 2px solid #4d4d4d;
     border-radius: 15px;
     padding: 15px;
 }
@@ -44,4 +45,48 @@
     text-align: right;
     border-radius: 10px;
     padding: 5px;
+}
+
+
+
+/* Botão De Voltar */
+sair{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 1.3em 3em;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+    
+    sair:hover{
+    background-color: #00233d;
+    box-shadow: 0px 15px 20px #001525;
+    color: #fff;
+    transform: translateY(-7px);
+    }
+    
+    sair:active{
+    transform: translateY(-1px);
+    }
+
+
+
+
+
+/* Mudança De Tamanho Para Celular */
+@media screen and (max-width:1020px){
+
+
+
 }
