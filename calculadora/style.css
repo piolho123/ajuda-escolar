@@ -79,14 +79,3 @@ sair{
     sair:active{
     transform: translateY(-1px);
     }
-
-
-
-
-
-/* Mudança De Tamanho Para Celular */
-@media screen and (max-width:1020px){
-
-
-
-}
