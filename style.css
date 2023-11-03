@@ -102,7 +102,7 @@ p{
 
 
 /* <!-- Botão Da Calculadora --> */
-.Btn {
+.Btn1 {
   transform: translate(-50%, -50%);
   top: 10%;
   left: 95%;
@@ -119,7 +119,7 @@ p{
   transition: all .3s;
 }
 
-.svgContainer {
+.svgContainer1 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -133,7 +133,7 @@ p{
   border: 1px solid rgba(156, 156, 156, 0.466);
 }
 
-.BG {
+.BG1 {
   position: absolute;
   content: "";
   width: 100%;
@@ -145,18 +145,75 @@ p{
   transition: all .3s;
 }
 
-.Btn:hover .BG {
+.Btn1:hover .BG1 {
   transform: rotate(35deg);
   transform-origin: bottom;
 }
 
-.Btn:hover .svgContainer {
+.Btn1:hover .svgContainer1 {
   background-color: rgba(156, 156, 156, 0.466);
   backdrop-filter: blur(4px);
 }
 
 
+/* <!-- Botão Da Calculadora --> */
+.Btn2 {
+  transform: translate(-50%, -50%);
+  top: 17%;
+  left: 95%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
 
+.svgContainer2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG2 {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00233d;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn2:hover .BG2 {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn2:hover .svgContainer2 {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+
+
+.ccc{
+  color: #ffffff;
+}
 
 /* Mudança De Tamanho Para Celular */
 @media screen and (max-width: 1020px){
@@ -185,7 +242,7 @@ p{
 
 
   /* <!-- Botão Da Calculadora --> */
-  .Btn {
+  .Btn1{
     left: 80%;
     scale: 0.9;
   }
